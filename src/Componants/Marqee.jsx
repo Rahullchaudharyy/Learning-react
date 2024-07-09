@@ -6,12 +6,12 @@ import React from 'react'
 const Marqee = () => {
     
   return (
-    <div className='w-full py-20 rounded-t-3xl  bg-[#004D43]'>
+    <div data-scroll data-scroll-section  data-scroll-speed=".2"  className='w-full py-20 rounded-t-3xl  bg-[#004D43]'>
 
-        <div className='Text-div border-t-2 border-b-2 flex border-zinc-300 whitespace-nowrap'>
-            <motion.h1 initial={{x:0}} animate={{x:"-100%"}} transition={{ease:"linear",repeat:Infinity,duration:10}} className='text-[16vw] font-semibold uppercase leading-none'>We Are Ochi</motion.h1>
-            <motion.h1 initial={{x:0}} animate={{x:"-100%"}} transition={{ease:"linear",repeat:Infinity,duration:10}} className='text-[16vw] font-semibold uppercase leading-none'>We Are Ochi</motion.h1>
-            <motion.h1 initial={{x:0}} animate={{x:"-100%"}} transition={{ease:"linear",repeat:Infinity,duration:10}} className='text-[16vw] font-semibold uppercase leading-none'>We Are Ochi</motion.h1>
+        <div className='Text-div gap-2 border-t-2 border-b-2 flex border-zinc-300 whitespace-nowrap'>
+            <motion.h1 initial={{x:0}} animate={{x:"-100%"}} transition={{ease:"linear",repeat:Infinity,duration:10}} className='text-[16vw] font-semibold uppercase leading-none'> We Are Ochi</motion.h1>
+            <motion.h1 initial={{x:0}} animate={{x:"-100%"}} transition={{ease:"linear",repeat:Infinity,duration:10}} className='text-[16vw] font-semibold uppercase leading-none'> We Are Ochi</motion.h1>
+            <motion.h1 initial={{x:0}} animate={{x:"-100%"}} transition={{ease:"linear",repeat:Infinity,duration:10}} className='text-[16vw] font-semibold uppercase leading-none'> We Are Ochi</motion.h1>
         </div>
     </div>
   )

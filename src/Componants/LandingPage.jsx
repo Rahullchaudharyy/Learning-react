@@ -1,17 +1,21 @@
 // eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import { GoArrowUpRight } from "react-icons/go";
 
+
 const LandingPage = () => {
+    
     return (
-        <div className="w-full h-screen bg-zinc-900 pt-1">
+        <div data-scroll data-scroll-speed="-.3"  className="w-full h-screen bg-zinc-900 pt-1">
             <div className="text-structure mt-52">
                 {["We Create", "Eye Opening", "Presentations"].map((item, index) => {
                     return (
                         <div key={index} className="Masker px-20 ">
                             <div className="w-fit flex  overflow-hidden items-center ">
                                 {index == 1 ? (
-                                    <div className="w-[10.6vmin] h-[3.9vw] rounded mr-4 bg-red-700"></div>
+                                    <motion.div initial={{width:0}} animate={{width:"10.6vmin"}} transition={{ease:[0.76, 0, 0.24, 1],duration:1,delay:0.5}} className="w-[10.6vmin] h-[3.9vw] rounded mr-4 bg-cover bg-center bg-[url(&quot;https://ochi.design/wp-content/uploads/2022/05/Top-Viewbbcbv-1-1440x921.jpg&quot;)]"></motion.div>
                                 ) : (
                                     ""
                                 )}
