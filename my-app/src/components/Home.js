@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Data from '../Data';
 import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { addItem , clearCart,removeItem} from '../utils/cartSlice';
 
 const Home = () => {
   const [Search, setSearch] = useState('');
@@ -17,29 +19,13 @@ const Home = () => {
   const changeState = () => {
     setAuth(!Auth)
   }
-  useEffect(()=>{
-   async function fetchData(){
-    fetch('https://mockapi.io/clones/zomato-api/v1/restaurants')
-    .then(response => response.json())
-    .then(data => {
-      data.forEach(restaurant => {
-        const name = restaurant.name;
-        const rating = restaurant.rating;
-        const price = restaurant.cost;
-        
-        console.log(`Restaurant: ${name}, Rating: ${rating}, Price: ${price}`);
-      });
-    })
-    .catch(error => console.error('Error:', error));
-  
 
+  const dispatch = useDispatch()
 
-  
-  
-    }
+  const HandleAddItem =()=>{
+   dispatch(addItem("Pizza"))
+  }
 
-    fetchData()
-  })
 
   
 
@@ -100,9 +86,10 @@ const Home = () => {
                   <span className="text-sm">Price:</span>
                   <h2 className="font-bold">${itemData.price}</h2>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex justify-between items-center gap-2">
                   <span className="text-sm">Delivery Time:</span>
                   <h2 className="font-bold">{itemData.timeToDeliver}</h2>
+                  <button onClick={HandleAddItem} className='p-3 py-1 text-white rounded-xl bg-black'>Add</button>
                 </div>
               </div>
             </div>

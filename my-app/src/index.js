@@ -8,6 +8,8 @@ import About from './components/About'
 import Contact from './components/Contact'
 import AppLayout from './AppLayout';
 import DishPageFull from './components/DIshPage';
+import {Provider} from 'react-redux'
+import appStore from './utils/appStore';
 
 
 const Myrouter = createBrowserRouter([
@@ -39,11 +41,16 @@ const Myrouter = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <Provider store={appStore}>
 
-  <RouterProvider router={Myrouter}>
+
+<RouterProvider router={Myrouter}>
     <App />
 
   </RouterProvider>
+  </Provider>
+
+
 );
 
 
