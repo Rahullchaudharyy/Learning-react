@@ -23,7 +23,7 @@ const Header = () => {
           <Link to='/contact' className="hover:text-gray-200 cursor-pointer transition duration-200" >Contact</Link>
           <button className="relative flex items-center justify-center p-2 b rounded-lg  focus:outline-none">
             Cart
-            <span className='absolute -top-2 -right-2 h-[6vmin] w-[6vmin] flex items-center justify-center rounded-full bg-red-600 text-white text-[2vmin] font-bold shadow-lg '>
+            <span className='absolute -top-2 -right-2 h-[2.6vmin] w-[2.6vmin] flex items-center justify-center rounded-full bg-red-600 text-white text-[2vmin] font-bold shadow-lg '>
               {cartItems.length===0?0:cartItems.length}
             </span>
           </button>
